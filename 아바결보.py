@@ -4,6 +4,7 @@ import streamlit as st #외부 프로그램 불러오기
 #pip install streamlit 입력 및 엔터
 #cmd에 "run streamlit (파일위치)" 입력
 # #이 프로그램 실행을 위해서는 python이 아니라 cmd를 통해 run시켜야함
+#https://hb-scode-35df.streamlit.app/
 recommended_books = {
     "STJ": ["일 잘하는 사람은 단순하게 합니다", "그릿"],
     "SFJ": ["나는 나로 살기로 했다", "말 그릇"],
@@ -95,7 +96,7 @@ def go_to(page_name):
 
 # --- IE ---
 if st.session_state.page == "E": #페이지 불러오기
-    st.title("📘 E/I 섹션") #페이지 제목
+    st.title("독서 유형 검사 📚") #페이지 제목
     for i, q in enumerate(questionsE, 1):#리스트에서 문항 받아오기
         response1 = st.radio(q, [1, 2, 3, 4, 5], horizontal=True, key=f"E{i}")#선택창 띄우고 값 받기
         EI += response1 #값 누적
@@ -108,7 +109,6 @@ if st.session_state.page == "E": #페이지 불러오기
 
 # --- NS ---
 elif st.session_state.page == "NS":
-    st.title("📙 N/S 섹션")
     for i, q in enumerate(questionsN, 1):
         response = st.radio(q, [1, 2, 3, 4, 5], horizontal=True, key=f"N{i}")
         NS += response
@@ -122,7 +122,6 @@ elif st.session_state.page == "NS":
 
 # --- FT ---
 elif st.session_state.page == "FT":
-    st.title("📗 F/T 섹션")
     for i, q in enumerate(questionsF, 1):
         response = st.radio(q, [1, 2, 3, 4, 5], horizontal=True, key=f"F{i}")
         FT += response
@@ -137,7 +136,6 @@ elif st.session_state.page == "FT":
 
 # --- JP ---
 elif st.session_state.page == "JP":
-    st.title("📕 J/P 섹션")
     for i, q in enumerate(questionsJ, 1):
         response = st.radio(q, [1, 2, 3, 4, 5], horizontal=True, key=f"J{i}")
         JP += response
