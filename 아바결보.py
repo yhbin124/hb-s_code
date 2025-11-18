@@ -109,6 +109,12 @@ if st.session_state.page == "E": #페이지 불러오기
 
 # --- NS ---
 elif st.session_state.page == "NS":
+    st.markdown("""
+    <script>
+        window.scrollTo({top: 0, behavior: 'auto'});
+    </script>
+""", unsafe_allow_html=True)
+
     st.title('page 2')
     for i, q in enumerate(questionsN, 1):
         response = st.radio(q, [1, 2, 3, 4, 5], horizontal=True, key=f"N{i}")
@@ -184,3 +190,4 @@ elif st.session_state.page == "RESULT":
     st.write(f"J = {ss4} : P = {100- ss4}")
 
     #최대점수 50 최저점수 10
+
