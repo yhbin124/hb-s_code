@@ -109,6 +109,7 @@ if st.session_state.page == "E": #페이지 불러오기
 
 # --- NS ---
 elif st.session_state.page == "NS":
+    st.title('page 2')
     for i, q in enumerate(questionsN, 1):
         response = st.radio(q, [1, 2, 3, 4, 5], horizontal=True, key=f"N{i}")
         NS += response
@@ -122,6 +123,7 @@ elif st.session_state.page == "NS":
 
 # --- FT ---
 elif st.session_state.page == "FT":
+    st.title('page 3')
     for i, q in enumerate(questionsF, 1):
         response = st.radio(q, [1, 2, 3, 4, 5], horizontal=True, key=f"F{i}")
         FT += response
@@ -136,6 +138,7 @@ elif st.session_state.page == "FT":
 
 # --- JP ---
 elif st.session_state.page == "JP":
+    st.title('page 4')
     for i, q in enumerate(questionsJ, 1):
         response = st.radio(q, [1, 2, 3, 4, 5], horizontal=True, key=f"J{i}")
         JP += response
@@ -179,4 +182,5 @@ elif st.session_state.page == "RESULT":
     st.write(f"N = {ss2} : S = {100 - ss2}")
     st.write(f"F = {ss3} : T = {100- ss3}")
     st.write(f"J = {ss4} : P = {100- ss4}")
+
     #최대점수 50 최저점수 10
