@@ -97,6 +97,8 @@ def go_to(page_name):
 # --- IE ---
 if st.session_state.page == "E": #페이지 불러오기
     st.title("독서 유형 검사 📚") #페이지 제목
+    st.write('1-------------------------5')
+    st.write('매우 그렇지 않다/ 매우 그렇다')
     for i, q in enumerate(questionsE, 1):#리스트에서 문항 받아오기
         response1 = st.radio(q, [1, 2, 3, 4, 5], horizontal=True, key=f"E{i}")#선택창 띄우고 값 받기
         EI += response1 #값 누적
@@ -109,7 +111,7 @@ if st.session_state.page == "E": #페이지 불러오기
 
 # --- NS ---
 elif st.session_state.page == "NS":
-    st.title('page 2')
+    st.title('page 2/4')
     for i, q in enumerate(questionsN, 1):
         response = st.radio(q, [1, 2, 3, 4, 5], horizontal=True, key=f"N{i}")
         NS += response
@@ -123,7 +125,7 @@ elif st.session_state.page == "NS":
 
 # --- FT ---
 elif st.session_state.page == "FT":
-    st.title('page 3')
+    st.title('page 3/4')
     for i, q in enumerate(questionsF, 1):
         response = st.radio(q, [1, 2, 3, 4, 5], horizontal=True, key=f"F{i}")
         FT += response
@@ -138,7 +140,7 @@ elif st.session_state.page == "FT":
 
 # --- JP ---
 elif st.session_state.page == "JP":
-    st.title('page 4')
+    st.title('page 4/4')
     for i, q in enumerate(questionsJ, 1):
         response = st.radio(q, [1, 2, 3, 4, 5], horizontal=True, key=f"J{i}")
         JP += response
@@ -184,6 +186,7 @@ elif st.session_state.page == "RESULT":
     st.write(f"J(두꺼운 책) = {ss4} : P(얇은 책) = {100- ss4}")
 
     #최대점수 50 최저점수 10
+
 
 
 
