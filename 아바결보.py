@@ -162,10 +162,10 @@ elif st.session_state.page == "RESULT":
     ss3= int(s3/6*10)
     ss4= int(s4/6*10)
 
-    ei_type = "E" if ss1 >= (100 - ss1) else "I"# 비교를 통한 우위 항목 선택
-    ns_type = "N" if ss2 >= (100 - ss2) else "S"
-    ft_type = "F" if ss3 >= (100 - ss3) else "T"
-    jp_type = "J" if ss4 >= (100 - ss4) else "P"
+    ei_type = "E" if s1 >= (60 - s1) else "I"# 비교를 통한 우위 항목 선택
+    ns_type = "N" if s2 >= (60 - s2) else "S"
+    ft_type = "F" if s3 >= (60 - s3) else "T"
+    jp_type = "J" if s4 >= (60 - s4) else "P"
     mbti_result = ei_type + ns_type + ft_type + jp_type #독서성향 정의
     book_recommend = ns_type + ft_type + jp_type #도서 추천 용 독서성향
     result = "/ ".join(recommended_books[book_recommend])
@@ -184,6 +184,7 @@ elif st.session_state.page == "RESULT":
     st.write(f"J(두꺼운 책) = {ss4} : P(얇은 책) = {100- ss4}")
 
     #최대점수 50 최저점수 10
+
 
 
 
