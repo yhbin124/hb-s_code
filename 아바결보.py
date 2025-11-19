@@ -178,12 +178,13 @@ elif st.session_state.page == "RESULT":
     st.write(result)
     st.write("꼭 한 번 읽어봐주세요")
     st.write()
-    st.write(f"E = {ss1} : I = {100 - ss1}")
-    st.write(f"N = {ss2} : S = {100 - ss2}")
-    st.write(f"F = {ss3} : T = {100- ss3}")
-    st.write(f"J = {ss4} : P = {100- ss4}")
+    st.write(f"E(  여러책  ) = {ss1} : I(  한 책  ) = {100 - ss1}")
+    st.write(f"N(흥미 위주) = {ss2} : S(깨달음 위주) = {100 - ss2}")
+    st.write(f"F(감성적) = {ss3} : T(지식적) = {100- ss3}")
+    st.write(f"J(두꺼운 책) = {ss4} : P(얇은 책) = {100- ss4}")
 
     #최대점수 50 최저점수 10
+
 
 
 
